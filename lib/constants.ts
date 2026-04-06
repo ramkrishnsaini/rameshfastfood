@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/base-path";
+
 /** WhatsApp Business number: country code + number, no + (used in wa.me links). */
 export const WHATSAPP_NUMBER = "919785566796";
 
@@ -5,8 +7,8 @@ export const PHONE_DISPLAY = "+91 97855 66796";
 
 export const SITE_NAME = "Ramesh Fast Food";
 
-/** Brand logo in `public/` (PNG). */
-export const LOGO_PATH = "/logo.png" as const;
+/** Brand logo in `public/` (PNG), includes GitHub Pages basePath when set. */
+export const LOGO_PATH = assetPath("/logo.png");
 
 /** Full postal address for map, footer, and SEO. */
 export const ADDRESS =

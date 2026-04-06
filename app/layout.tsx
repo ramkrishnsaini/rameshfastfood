@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { assetPath } from "@/lib/base-path";
 import { restaurantJsonLd } from "@/lib/json-ld";
 import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
@@ -17,6 +18,7 @@ const outfit = Outfit({
 });
 
 const siteUrl = getSiteUrl();
+const ogImage = `${siteUrl.replace(/\/$/, "")}/images/og-hero.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -46,8 +48,8 @@ export const metadata: Metadata = {
   creator: "Ramesh Fast Food",
   publisher: "Ramesh Fast Food",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: assetPath("/logo.png"),
+    apple: assetPath("/logo.png"),
   },
   openGraph: {
     title: "Best Fast Food in Lachhmangarh 🔥 | Ramesh Fast Food",
@@ -57,7 +59,7 @@ export const metadata: Metadata = {
     siteName: "Ramesh Fast Food",
     images: [
       {
-        url: "/images/og-hero.png",
+        url: ogImage,
         width: 1200,
         height: 630,
         alt: "Ramesh Fast Food Lachhmangarh",
@@ -71,7 +73,7 @@ export const metadata: Metadata = {
     title: "Best Fast Food in Lachhmangarh 🔥",
     description:
       "Masala Dosa, Burger, Pizza, Chowmein, Pav Bhaji & more at Ramesh Fast Food near SDM Court.",
-    images: ["/images/og-hero.png"],
+    images: [ogImage],
   },
   robots: {
     index: true,
