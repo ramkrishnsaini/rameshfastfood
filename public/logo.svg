@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Ramesh Fast Food</title>
+  <defs>
+    <linearGradient id="g" x1="6" y1="52" x2="52" y2="4" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF6B00"/>
+      <stop offset="0.55" stop-color="#FF8533"/>
+      <stop offset="1" stop-color="#FACC15"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="50" height="50" rx="15" fill="url(#g)"/>
+  <rect x="5.5" y="5.5" width="45" height="45" rx="13" stroke="#fff" stroke-opacity="0.22"/>
+  <circle cx="42.5" cy="13.5" r="4" fill="#FACC15"/>
+  <circle cx="42.5" cy="13.5" r="2" fill="#FFFEF0" opacity="0.5"/>
+  <text x="28" y="37" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="25" font-weight="800" fill="#fff">R</text>
+  <text x="68" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="800" fill="#F9FAFB">Ramesh</text>
+  <text x="68" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" letter-spacing="0.2em" fill="#FF8F40">FAST FOOD</text>
+</svg>

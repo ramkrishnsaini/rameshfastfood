@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #ff6b00;
+  --brand-glow: rgba(255, 107, 0, 0.45);
+  --accent: #facc15;
+  --surface: #111827;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-gray-100 antialiased;
+}
+
+::selection {
+  @apply bg-brand/30 text-white;
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply border border-white/10 bg-white/[0.06] shadow-card backdrop-blur-xl;
+  }
+
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-brand via-accent to-brand-muted bg-clip-text text-transparent;
+  }
+
+  .btn-glow {
+    box-shadow:
+      0 0 0 1px rgba(255, 107, 0, 0.35),
+      0 12px 40px -12px var(--brand-glow);
+  }
+
+  .btn-glow-accent {
+    box-shadow:
+      0 0 0 1px rgba(250, 204, 21, 0.35),
+      0 12px 40px -12px rgba(250, 204, 21, 0.35);
+  }
+}
+
+/* Ripple via pseudo on buttons using overflow-hidden + animate */
+@keyframes ripple {
+  from {
+    transform: scale(0);
+    opacity: 0.45;
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
