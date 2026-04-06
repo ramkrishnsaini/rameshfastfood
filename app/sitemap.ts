@@ -2,13 +2,14 @@ import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/site-url";
 
 export const dynamic = "force-static";
+export const revalidate = false;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
 
   return [
     {
-      url: base.endsWith("/") ? base : `${base}/`,
+      url: `${base}/`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
