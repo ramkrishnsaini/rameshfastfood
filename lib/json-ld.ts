@@ -16,7 +16,7 @@ export function restaurantJsonLd(): Record<string, unknown> {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: SITE_NAME,
-    image: [`${base}/logo.png`, `${base}/images/og-hero.png`],
+    image: [`${base}/images/og-social.png`, `${base}/logo.png`, `${base}/images/og-hero.png`],
     address: {
       "@type": "PostalAddress",
       streetAddress: "SDM Ct Rd",

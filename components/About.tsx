@@ -37,8 +37,8 @@ export function About() {
           <ScrollReveal delay={0.12}>
             <div className="relative">
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand/25 via-transparent to-accent/15 blur-2xl" />
-              <div className="glass-panel relative overflow-hidden rounded-[2rem] p-8 sm:p-10">
-                <div className="grid grid-cols-2 gap-4 text-center">
+              <div className="glass-panel relative min-w-0 overflow-hidden rounded-[2rem] p-5 sm:p-8 md:p-10">
+                <div className="grid min-w-0 grid-cols-2 gap-3 text-center sm:gap-4">
                   {[
                     { label: "Fresh prep", value: "Daily" },
                     { label: "Hygiene", value: "Priority" },
@@ -47,12 +47,12 @@ export function About() {
                   ].map((s) => (
                     <div
                       key={s.label}
-                      className="rounded-2xl border border-white/10 bg-black/20 px-3 py-5"
+                      className="min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-black/20 px-2 py-4 sm:px-3 sm:py-5"
                     >
-                      <p className="font-display text-2xl font-bold text-brand-muted">
+                      <p className="break-words font-display text-lg font-bold leading-snug text-brand-muted sm:text-xl md:text-2xl">
                         {s.value}
                       </p>
-                      <p className="mt-1 text-xs uppercase tracking-wider text-gray-500">
+                      <p className="mt-1.5 text-[0.65rem] uppercase leading-tight tracking-wider text-gray-500 sm:text-xs">
                         {s.label}
                       </p>
                     </div>

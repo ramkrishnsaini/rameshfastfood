@@ -18,7 +18,8 @@ const outfit = Outfit({
 });
 
 const siteUrl = getSiteUrl();
-const ogImage = `${siteUrl.replace(/\/$/, "")}/images/og-hero.png`;
+/** 1200×630 — run `npm run generate:og` to rebuild from `public/images/Mysore Masala Dosa.png`. */
+const ogImage = `${siteUrl.replace(/\/$/, "")}/images/og-social.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: "Ramesh Fast Food Lachhmangarh",
+        alt: "Ramesh Fast Food — Mysore Dosa and best food in Lachhmangarh",
       },
     ],
     locale: "en_IN",

@@ -1,7 +1,6 @@
 # Build static site and deploy to GitHub Pages.
-# Repo → Settings → Pages → Source: GitHub Actions.
-# Set NEXT_PUBLIC_SITE_URL / NEXT_PUBLIC_BASE_PATH locally if you use a custom domain or non-default layout.
-
+# Live site: https://rameshfastfood.in
+# Repo → Settings → Pages → Custom domain: rameshfastfood.in (DNS + CNAME as per GitHub docs).
 name: Deploy to GitHub Pages
 
 on:
@@ -37,23 +36,10 @@ jobs:
       - name: Build static export
         env:
           NEXT_TELEMETRY_DISABLED: "1"
+          # Canonical URL for sitemap, OG tags, JSON-LD (custom domain at site root — no base path).
+          NEXT_PUBLIC_SITE_URL: https://rameshfastfood.in
         run: |
-          set -e
-          OWNER="${{ github.repository_owner }}"
-          REPO="${{ github.event.repository.name }}"
-          REPO_LC=$(echo "$REPO" | tr '[:upper:]' '[:lower:]')
-          OWNER_LC=$(echo "$OWNER" | tr '[:upper:]' '[:lower:]')
-
-          if [ "$REPO_LC" = "${OWNER_LC}.github.io" ]; then
-            export NEXT_PUBLIC_SITE_URL="https://${OWNER_LC}.github.io"
-            export NEXT_PUBLIC_BASE_PATH=""
-          else
-            export NEXT_PUBLIC_SITE_URL="https://${OWNER_LC}.github.io/${REPO_LC}"
-            export NEXT_PUBLIC_BASE_PATH="/${REPO_LC}"
-          fi
-
           echo "NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL"
-          echo "NEXT_PUBLIC_BASE_PATH=${NEXT_PUBLIC_BASE_PATH:-<empty>}"
           npm run build
 
       - name: Upload artifact
