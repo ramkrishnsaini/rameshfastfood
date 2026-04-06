@@ -24,6 +24,9 @@ const ogImage = `${siteUrl.replace(/\/$/, "")}/images/og-social.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: `${siteUrl.replace(/\/$/, "")}/`,
+  },
   title: {
     default: "Ramesh Fast Food | Best Fast Food in Lachhmangarh (Sikar)",
     template: "%s | Ramesh Fast Food",

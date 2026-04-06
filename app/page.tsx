@@ -1,5 +1,6 @@
 import { About } from "@/components/About";
 import { ContactCTA } from "@/components/ContactCTA";
+import { LocalAdvantage } from "@/components/LocalAdvantage";
 import { FeaturedItems } from "@/components/FeaturedItems";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
@@ -17,6 +18,7 @@ export default function Home() {
         <MenuSection />
         <FeaturedItems />
         <About />
+        <LocalAdvantage />
         <Location />
         <ContactCTA />
       </main>

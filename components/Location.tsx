@@ -23,8 +23,7 @@ export function Location() {
             Location
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-            Ramesh Fast Food — {ADDRESS}. Easy to find on SDM Court Road in
-            Lachhmangarh (Laxmangarh).
+            Ramesh Fast Food — {ADDRESS}. Pin matches our listing on Google Maps.
           </p>
         </ScrollReveal>
 

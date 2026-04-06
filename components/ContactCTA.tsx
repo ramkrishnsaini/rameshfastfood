@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { GlowButton } from "@/components/GlowButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { PHONE_DISPLAY, whatsappHref } from "@/lib/constants";
+import { PHONE_DISPLAY, PHONE_E164, whatsappHref } from "@/lib/constants";
 
 export function ContactCTA() {
   return (
@@ -30,7 +30,7 @@ export function ContactCTA() {
                 <span className="text-gray-500">Phone</span>
                 {": "}
                 <a
-                  href={`tel:${PHONE_DISPLAY.replace(/\s/g, "")}`}
+                  href={`tel:${PHONE_E164}`}
                   className="font-semibold text-white underline decoration-brand/50 underline-offset-4 hover:text-brand"
                 >
                   {PHONE_DISPLAY}

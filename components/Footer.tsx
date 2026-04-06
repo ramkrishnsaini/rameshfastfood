@@ -7,6 +7,7 @@ const quickLinks = [
   { href: "#menu", label: "Menu" },
   { href: "#featured", label: "Featured" },
   { href: "#about", label: "About" },
+  { href: "#why-locals", label: "Why locals" },
   { href: "#location", label: "Location" },
   { href: "#contact", label: "Contact" },
 ];
